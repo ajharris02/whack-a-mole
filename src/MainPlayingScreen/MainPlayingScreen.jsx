@@ -1,7 +1,9 @@
 import { useState } from "react";
-
-export default function MainPlayingScreen({ onRestart }) {
+import { useGame } from "../GameProvider/GameProvider";
+export default function MainPlayingScreen() {
   const [score, setScore] = useState(0);
+
+  const { handleGameEnd } = useGame();
 
   const [moleHole, setMoleHole] = useState(() => Math.floor(Math.random() * 9));
   const holes = [0, 1, 2, 3, 4, 5, 6, 7, 8];
@@ -20,7 +22,7 @@ export default function MainPlayingScreen({ onRestart }) {
       <h1>Whack-a-Mole!</h1>
       <div className="score-container">
         <h2 className="score">Score: {score}</h2>
-        <button className="restartButton" onClick={() => onRestart(score)}>
+        <button className="restartButton" onClick={() => handleGameEnd(score)}>
           Restart
         </button>
       </div>

@@ -1,4 +1,6 @@
-export default function WelcomeScreen({ onPlay, highScore }) {
+import { useGame } from "../GameProvider/GameProvider";
+export default function WelcomeScreen() {
+  const { setIsPlaying, highScore } = useGame();
   return (
     <div className="welcomeScreen">
       <h1>Welcome to Whack-a-Mole!</h1>
@@ -14,7 +16,7 @@ export default function WelcomeScreen({ onPlay, highScore }) {
         button below to start playing the game!
       </p>
       <h3>High Score: {highScore}</h3>
-      <button className="playButton" onClick={onPlay}>
+      <button className="playButton" onClick={() => setIsPlaying(true)}>
         Play
       </button>
     </div>
