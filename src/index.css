@@ -1,9 +1,80 @@
-
+.score-container {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
+}
 .hole {
-  background: url("/hole.png") no-repeat center/contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcomeScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.welcomeScreen p {
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.mole {
-  background-image: url("/mole.png");
+.playButton {
+  padding: 10px 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  border: 2px solid black;
+  width: 300px;
+  height: 50px;
+  font-size: larger;
+  background-color: lightgray;
+  font-weight: bold;
 }
 
+.Game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+}
+.score {
+  font-family: "Courier New", Courier, monospace;
+  border: 2px solid black;
+  width: 300px;
+  height: 50px;
+  font-size: larger;
+  background-color: lightgray;
+  align-content: center;
+}
+.restartButton {
+  font-family: "Courier New", Courier, monospace;
+  border: 2px solid black;
+  width: 300px;
+  height: 50px;
+  font-size: larger;
+  background-color: lightgray;
+  font-weight: bold;
+}
+.welcomeScreen h3 {
+  font-family: "Courier New", Courier, monospace;
+  border: 2px solid black;
+  width: 300px;
+  height: 50px;
+  font-size: larger;
+  background-color: lightgray;
+  align-content: center;
+}
